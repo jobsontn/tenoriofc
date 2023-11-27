@@ -330,4 +330,8 @@ jQuery(document).ready(function($) {
 		$("#bgndVideo").YTPlayer();
 	});
 
+	$('.nav-link').click(function() {
+		$('body').removeClass('offcanvas-menu');
+	});
+
 });
