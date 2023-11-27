@@ -262,7 +262,7 @@ h5,
 }
 
 .bg-image {
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -273,6 +273,19 @@ h5,
 }
 
 .bg-image.overlay:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  background-size: cover;
+}
+
+.bg-image.overlay::before {
   position: absolute;
   content: "";
   top: 0;
